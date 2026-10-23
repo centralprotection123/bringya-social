@@ -1,1 +1,18 @@
-[]
+[
+ {
+  "date": "2026-10-23",
+  "audience": "customer",
+  "format": "parcel label",
+  "topic": "forgotten laptop bag, small parcels up to 15 kg, PIN, live tracking",
+  "lead": "blue",
+  "file": "posts/2026-10-23/customer.jpg"
+ },
+ {
+  "date": "2026-10-23",
+  "audience": "business",
+  "format": "shop door sign",
+  "topic": "pickup-only to delivery, BringYa Shop Ready flow",
+  "lead": "navy",
+  "file": "posts/2026-10-23/business.jpg"
+ }
+]

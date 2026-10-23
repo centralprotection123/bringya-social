@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{margin:0;box-sizing:border-box}
+body{width:1080px;height:1350px;font-family:Inter,sans-serif;background:#154CFE;position:relative;overflow:hidden}
+.route{position:absolute;inset:0}
+.label{position:absolute;left:150px;top:150px;width:780px;background:#fff;border-radius:18px;transform:rotate(-4deg);box-shadow:0 40px 80px rgba(5,15,50,.45);padding:44px 48px;font-family:"Courier 10 Pitch",Courier,monospace;color:#0B1B4D}
+.hd{display:flex;justify-content:space-between;align-items:center;border-bottom:5px solid #0B1B4D;padding-bottom:22px}
+.hd img{height:54px}
+.hd span{font-size:26px;font-weight:700}
+.row{display:flex;border-bottom:2px dashed #9AA6C8;padding:20px 0}
+.k{width:200px;font-size:22px;font-weight:700;color:#6B7AA6;padding-top:6px}
+.v{flex:1;font-size:32px;font-weight:700;line-height:1.25}
+.bar{display:flex;gap:4px;height:90px;margin-top:28px;align-items:stretch}
+.bar i{background:#0B1B4D;display:block}
+.stamp{position:absolute;right:-40px;bottom:-70px;width:250px;height:250px;border-radius:50%;background:#DDFB33;color:#0B1B4D;display:flex;align-items:center;justify-content:center;text-align:center;font-family:Inter,sans-serif;font-weight:900;font-size:40px;line-height:1;transform:rotate(14deg);border:6px dashed #0B1B4D}
+.cap{position:absolute;left:90px;right:90px;bottom:80px;color:#fff;font-size:44px;font-weight:800;line-height:1.15;letter-spacing:-.02em}
+.cap small{display:block;font-size:28px;font-weight:500;color:#DCE5FF;margin-top:14px;letter-spacing:0}
+</style></head><body>
+<svg class="route" viewBox="0 0 1080 1350"><path d="M-40 1180 C 250 1080, 200 900, 520 860 S 900 640, 1120 700" fill="none" stroke="#DDFB33" stroke-width="8" stroke-dasharray="4 26" stroke-linecap="round" opacity=".7"/></svg>
+<div class="label" data-qa="mock">
+ <div class="hd"><img src="../../brand/bringya-logo.png"><span>SAME-DAY</span></div>
+ <div class="row"><div class="k">FROM</div><div class="v">Your desk at the office</div></div>
+ <div class="row"><div class="k">TO</div><div class="v">You, on the couch</div></div>
+ <div class="row"><div class="k">CONTENTS</div><div class="v">1 laptop bag you were sure you packed</div></div>
+ <div class="row"><div class="k">ARRIVES</div><div class="v">Today</div></div>
+ <div class="row"><div class="k">HANDOFF</div><div class="v">Delivery PIN only. No porch drops.</div></div>
+ <div class="bar" id="bar"></div>
+ <div class="stamp">TRACKED<br>LIVE</div>
+</div>
+<div class="cap" data-qa="text">Small parcels, big relief.<small>Up to 15 kg, door to door, across town today. Book in the BringYa app.</small></div>
+<script>const b=document.getElementById('bar');[3,1,2,5,1,1,3,2,4,1,2,1,5,2,1,3,1,4,2,1,1,3,2,5,1,2,3,1,1,4,2,1,3,2,1,5,1,2,4,1,3,1,2,1].forEach(w=>{const i=document.createElement('i');i.style.width=(w*3)+'px';b.appendChild(i);const g=document.createElement('span');g.style.width=(((w*7)%4)+2)*2+'px';b.appendChild(g)})</script>
+</body></html>
