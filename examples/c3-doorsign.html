@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{margin:0;box-sizing:border-box}
+body{width:1080px;height:1350px;font-family:Inter,sans-serif;background:#0B1B4D;position:relative;overflow:hidden;color:#fff}
+.glass{position:absolute;left:110px;right:110px;top:0;height:1000px;border:14px solid #13245E;border-top:none;border-radius:0 0 40px 40px;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,0) 45%)}
+.string{position:absolute;left:540px;top:0;width:0;height:250px}
+.string:before,.string:after{content:"";position:absolute;top:0;width:4px;height:270px;background:#B9C6EE;transform-origin:top}
+.string:before{left:-170px;transform:rotate(-34deg);left:0}
+.string:after{left:0;transform:rotate(34deg)}
+.nail{position:absolute;left:526px;top:20px;width:28px;height:28px;border-radius:50%;background:#B9C6EE}
+.sign{position:absolute;left:190px;top:230px;width:700px;height:420px;background:#DDFB33;color:#0B1B4D;border-radius:36px;transform:rotate(-3deg);box-shadow:0 40px 70px rgba(0,0,0,.45);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.sign .s{font-size:34px;font-weight:700;opacity:.65;text-decoration:line-through;text-decoration-thickness:4px}
+.sign .y{font-size:118px;font-weight:900;letter-spacing:-.045em;line-height:1}
+.sign .t{font-size:30px;font-weight:700;margin-top:18px}
+.cap{position:absolute;left:110px;right:110px;top:770px;font-size:56px;font-weight:900;line-height:1.08;letter-spacing:-.03em}
+.sub{position:absolute;left:110px;right:110px;top:1010px;font-size:31px;line-height:1.4;color:#B9C6EE}
+.foot{position:absolute;left:110px;right:110px;bottom:60px;display:flex;justify-content:space-between;align-items:center}
+.badge{background:#fff;border-radius:22px;padding:12px 20px}.badge img{height:46px;display:block}
+.url{font-size:30px;font-weight:800}
+</style></head><body>
+<div class="nail"></div><div class="string"></div>
+<div class="sign" data-qa="mock"><div class="s">Sorry, pickup only</div><div class="y">We deliver.</div><div class="t">Same day, across town</div></div>
+<div class="cap" data-qa="text">Flip the sign. Keep the customer.</div>
+<p class="sub" data-qa="text">Open a BringYa Shop. Customers order and pay by card, you pack and tap Ready, a local rider takes it from there.</p>
+<div class="foot"><div class="badge"><img src="../brand/bringya-logo.png"></div><span class="url" data-qa="text">bringya.ca/business</span></div>
+</body></html>
