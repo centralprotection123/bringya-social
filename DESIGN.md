@@ -27,7 +27,7 @@ Business ideas: flip from pickup-only to delivery, no van or drivers needed, pac
 - Brand font Inter (and Inter Display) for headings and body. Courier 10 Pitch / DejaVu Sans Mono only for "object" text (labels, receipts). Fonts must be installed locally; no web fonts.
 - Spend boldness in one place. Generous space; no clutter. Readable on a phone: body text ≥ 28px, headline 56–120px.
 - Avoid template tells: no ALL-CAPS eyebrow label above every headline, no "→" glued to every CTA, no headline with one word recoloured, no stack of identical rounded cards, no 01/02/03 unless it really is a sequence.
-- Logo: always the real file `brand/bringya-logo.png`, never redrawn, recoloured or stretched. On blue or navy backgrounds put it on a white rounded badge.
+- Logo: always the real file `brand/bringya-logo.png` (icon only: `brand/bringya-icon.png`, e.g. for app icons in notifications), never redrawn, recoloured or stretched. On blue or navy backgrounds put it on a white rounded badge.
 - Include `bringya.ca` (customers) or `bringya.ca/business` (business) somewhere small.
 - Make it feel human and specific: names, times, everyday details ("12 minutes later", "the lunch on the counter").
 
