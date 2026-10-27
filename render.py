@@ -16,8 +16,27 @@ Phone mockup rule (use always):
   .phone img{width:100%;height:auto;border-radius:48px;display:block}
   Never set a fixed height on .phone and never use object-fit:cover on the screenshot.
 """
-import sys, pathlib, json
+import sys, os, glob, shutil, pathlib, json
+if os.path.isdir("/opt/pw-browsers"):
+    os.environ.setdefault("PLAYWRIGHT_BROWSERS_PATH", "/opt/pw-browsers")
 from playwright.sync_api import sync_playwright
+
+
+def launch(p):
+    """Launch Chromium, falling back to any Chromium binary found on the machine."""
+    try:
+        return p.chromium.launch()
+    except Exception as first:
+        cands = [shutil.which(n) for n in ("chromium", "chromium-browser", "google-chrome")]
+        cands += glob.glob("/opt/pw-browsers/chromium*/chrome-linux*/chrome")
+        cands += glob.glob("/opt/pw-browsers/chromium*/chrome-linux*/headless_shell")
+        cands += glob.glob(os.path.expanduser("~/.cache/ms-playwright/chromium*/chrome-linux*/chrome"))
+        for c in [c for c in cands if c and os.path.exists(c)]:
+            try:
+                return p.chromium.launch(executable_path=c)
+            except Exception:
+                continue
+        raise first
 
 QA_JS = r"""
 () => {
@@ -56,7 +75,7 @@ QA_JS = r"""
 src = pathlib.Path(sys.argv[1]).resolve()
 out = sys.argv[2]
 with sync_playwright() as p:
-    b = p.chromium.launch()
+    b = launch(p)
     pg = b.new_page(viewport={"width": 1080, "height": 1350}, device_scale_factor=1)
     pg.goto(src.as_uri())
     pg.wait_for_load_state("networkidle")
