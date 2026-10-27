@@ -1,0 +1,42 @@
+name: Render post images
+on:
+  push:
+    paths: ["posts/**/*.html"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: render
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fonts
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-inter fonts-noto-color-emoji fonts-dejavu >/dev/null
+      - name: Playwright
+        run: |
+          pip install -q playwright
+          python -m playwright install --with-deps chromium >/dev/null
+      - name: Render any HTML post that has no JPG (or is newer than its JPG)
+        run: |
+          set -e
+          changed=0
+          for h in posts/*/*.html; do
+            j="${h%.html}.jpg"
+            if [ ! -f "$j" ] || [ "$(git log -1 --format=%ct -- "$h")" -gt "$(git log -1 --format=%ct -- "$j" 2>/dev/null || echo 0)" ]; then
+              echo "Rendering $h"
+              (cd "$(dirname "$h")" && python ../../render.py "$(basename "$h")" "$(basename "$j")") || echo "QA problems in $h (image still written)"
+              changed=1
+            fi
+          done
+          if [ "$changed" = 1 ] && [ -n "$(git status --porcelain posts)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add posts
+            git commit -m "Render post images"
+            git push
+          fi
