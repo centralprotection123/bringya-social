@@ -30,5 +30,13 @@
   "topic": "florist says yes to same-day delivery via BringYa Shop, Ready flow, tracking link",
   "lead": "blue",
   "file": "posts/2026-10-27/business.jpg"
+ },
+ {
+  "date": "2026-11-01",
+  "audience": "customer",
+  "format": "sticky-note to-do list",
+  "topic": "weekend errands (groceries, returning an item, a gift) done through BringYa",
+  "lead": "navy",
+  "file": "posts/2026-11-01/customer.jpg"
  }
 ]
