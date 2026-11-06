@@ -1,0 +1,41 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{margin:0;box-sizing:border-box}
+body{width:1080px;height:1350px;font-family:Inter,sans-serif;background:#F4F7FF;color:#0B1B4D;position:relative;overflow:hidden}
+.rail{position:absolute;left:0;right:0;top:118px;height:34px;background:linear-gradient(#C9D3F0,#AEBBE3);box-shadow:0 6px 0 #9AA8D4}
+h1{position:absolute;left:80px;right:80px;top:930px;font-size:84px;font-weight:900;line-height:1.02;letter-spacing:-.04em}
+h1 span{color:#154CFE}
+.sub{position:absolute;left:80px;right:80px;top:1180px;font-size:30px;display:none;line-height:1.4;font-weight:500;color:#3A4A7A}
+.ticket{position:absolute;left:220px;top:126px;width:640px;background:#fff;padding:56px 52px 62px;transform:rotate(1.5deg);transform-origin:top center;box-shadow:0 30px 60px rgba(11,27,77,.18);font-family:"Courier 10 Pitch","DejaVu Sans Mono",monospace;
+ -webkit-mask:radial-gradient(14px at 50% 100%,#0000 98%,#000) 50% 100%/28px 100% repeat-x}
+.clip{position:absolute;top:-14px;left:50%;width:120px;height:44px;margin-left:-60px;background:#0B1B4D;border-radius:8px}
+.th{font-family:Inter,sans-serif;font-weight:900;font-size:36px;text-align:center;margin-bottom:6px}
+.tsub{text-align:center;font-size:22px;color:#6B7AA6;margin-bottom:26px}
+.row{display:flex;justify-content:space-between;font-size:30px;line-height:1.55}
+hr{border:0;border-top:3px dashed #9AA6C8;margin:20px 0}
+.st{display:flex;align-items:center;gap:18px;font-size:29px;line-height:1.3;margin:14px 0;font-weight:700}
+.dot{flex:0 0 34px;height:34px;border-radius:50%;background:#154CFE;color:#DDFB33;font-family:Inter,sans-serif;font-weight:900;font-size:22px;display:flex;align-items:center;justify-content:center}
+.st.ready .dot{background:#DDFB33;color:#0B1B4D}
+.stamp{margin-top:26px;text-align:center;border:5px solid #154CFE;color:#154CFE;font-family:Inter,sans-serif;font-weight:900;font-size:34px;padding:12px;border-radius:14px;transform:rotate(-4deg)}
+.foot{position:absolute;left:80px;right:80px;bottom:56px;display:flex;justify-content:space-between;align-items:center}
+.logo{height:56px}
+.url{font-size:30px;font-weight:800}
+</style></head><body>
+<div class="rail"></div>
+<div class="ticket" data-qa="mock">
+ <div class="clip"></div>
+ <div class="th">Corner Café</div>
+ <div class="tsub">BringYa Shop order #0417</div>
+ <div class="row"><span>2x Cinnamon bun</span><span>✓</span></div>
+ <div class="row"><span>1x Bag of coffee beans</span><span>✓</span></div>
+ <div class="row"><span>1x Gift card</span><span>✓</span></div>
+ <hr>
+ <div class="st"><div class="dot">1</div>Paid by card</div>
+ <div class="st ready"><div class="dot">2</div>Packed, tapped READY</div>
+ <div class="st"><div class="dot">3</div>Rider sent, live map</div>
+ <div class="st"><div class="dot">4</div>Delivered with a PIN</div>
+ <div class="stamp">DONE. NO VAN.</div>
+</div>
+<h1 data-qa="text">You tap Ready. <span>We take it from there.</span></h1>
+<p class="sub" data-qa="text">You pack it and tap Ready. Only then is a local rider sent. No drivers to hire.</p>
+<div class="foot"><img class="logo" src="../../brand/bringya-logo.png"><span class="url" data-qa="text">bringya.ca/business</span></div>
+</body></html>
