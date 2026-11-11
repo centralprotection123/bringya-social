@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{margin:0;box-sizing:border-box}
+body{width:1080px;height:1350px;font-family:Inter,sans-serif;background:#154CFE;color:#fff;position:relative;overflow:hidden}
+h1{position:absolute;left:0;right:0;top:80px;text-align:center;font-size:104px;font-weight:900;letter-spacing:-.045em}
+.q{position:absolute;left:0;right:0;top:215px;text-align:center;font-size:34px;font-weight:600;color:#DCE5FF}
+.cards{position:absolute;left:60px;right:60px;top:310px;height:690px;display:flex;gap:84px;align-items:stretch}
+.card{flex:1;border-radius:44px;padding:44px 34px 40px;position:relative}
+.a{background:#0B1B4D}
+.b{background:#DDFB33;color:#0B1B4D}
+.tag{font-size:26px;font-weight:800;letter-spacing:.02em;opacity:.8;margin-bottom:10px}
+.t{font-size:50px;font-weight:900;line-height:1.02;letter-spacing:-.03em;margin-bottom:34px;min-height:102px}
+.li{font-size:30px;font-weight:600;line-height:1.3;padding:24px 0;border-top:2px solid rgba(255,255,255,.14)}
+.b .li{border-top-color:rgba(11,27,77,.15)}
+.ico{display:inline-block;width:44px}
+.vs{position:absolute;left:50%;top:610px;width:96px;height:96px;margin-left:-48px;border-radius:50%;background:#fff;color:#154CFE;font-size:40px;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 30px rgba(5,15,50,.35);z-index:2}
+.vote{position:absolute;left:60px;right:60px;top:1040px;display:flex;gap:84px}
+.vote div{flex:1;text-align:center;font-size:30px;font-weight:800;padding:22px;border-radius:999px;border:3px solid rgba(255,255,255,.5)}
+.vote .on{background:#fff;color:#154CFE;border-color:#fff}
+.foot{position:absolute;left:70px;right:70px;bottom:56px;display:flex;justify-content:space-between;align-items:center}
+.badge{background:#fff;border-radius:22px;padding:12px 20px}.badge img{height:44px;display:block}
+.url{font-size:30px;font-weight:800}
+</style></head><body>
+<h1 data-qa="text">This or that?</h1>
+<div class="q" data-qa="text">You need to get a bag across town today.</div>
+<div class="cards" data-qa="mock">
+ <div class="card a"><div class="tag">OPTION A</div><div class="t">Drive it over yourself</div>
+  <div class="li"><span class="ico">🧊</span>Scrape the windshield</div>
+  <div class="li"><span class="ico">🚗</span>Sit in traffic</div>
+  <div class="li"><span class="ico">🅿️</span>Hunt for parking</div>
+  <div class="li"><span class="ico">🔁</span>Drive all the way back</div></div>
+ <div class="card b"><div class="tag">OPTION B</div><div class="t">Book a BringYa</div>
+  <div class="li"><span class="ico">💲</span>See the fare first</div>
+  <div class="li"><span class="ico">📍</span>Watch it move live</div>
+  <div class="li"><span class="ico">🔐</span>PIN at the door</div>
+  <div class="li"><span class="ico">☕</span>Stay where you are</div></div>
+</div>
+<div class="vs">VS</div>
+<div class="vote"><div data-qa="text">Comment A</div><div class="on" data-qa="text">Comment B</div></div>
+<div class="foot"><div class="badge"><img src="../../brand/bringya-logo.png"></div><span class="url" data-qa="text">bringya.ca</span></div>
+</body></html>

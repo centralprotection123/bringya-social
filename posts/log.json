@@ -46,5 +46,13 @@
   "topic": "pack, tap Ready, rider sent, delivered with PIN; no van needed",
   "lead": "light",
   "file": "posts/2026-11-06/business.jpg"
+ },
+ {
+  "date": "2026-11-11",
+  "audience": "customer",
+  "format": "this-or-that poll (A vs B cards)",
+  "topic": "driving an errand across town vs booking a BringYa: fare first, live tracking, PIN",
+  "lead": "blue",
+  "file": "posts/2026-11-11/customer.jpg"
  }
 ]
